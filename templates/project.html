@@ -1,0 +1,31 @@
+{% extends "base.html" %} 
+{% block title %}User{% endblock title %}
+{% block body %}
+
+
+    <center>
+    
+        <form name="register" method="post" action="../insertproject/">  
+            {% csrf_token %}
+             
+    
+            <pre> 
+                <h1>Register Form </h1>
+    
+                Project ID     :<input type="text" name="tpid" value="" width="200" ><br>
+                Project Name   :<input type="text" name="tpname" value="" width="200" ><br>
+                Client Name    :<input type="text" name="tpcname" value="" width="200" ><br>
+                User Name      :<input type="text" name="tpuname" value="" width="200" ><br>
+                Created by     :<input type="text" name="tpccreate" value="" width="200" ><br>
+                
+                 
+                
+                <input type="Submit" name="reg" value="Click To Register" width="300" height="100" >
+            </pre>
+        </form>
+    </center>
+    
+    
+    
+
+{% endblock body %}

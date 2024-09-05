@@ -1,0 +1,28 @@
+{% extends "base.html" %} 
+{% block title %}User{% endblock title %}
+{% block body %}
+
+
+    <center>
+    
+        <form name="register" method="post" action="../insertuser/">  
+            {% csrf_token %}
+             
+    
+            <pre> 
+                <h1>Register Form </h1>
+    
+                User ID     :<input type="text" name="tuid" value="" width="200" ><br>
+                User Name   :<input type="text" name="tuname" value="" width="200" ><br>
+                
+                
+                
+                <input type="Submit" name="reg" value="Click To Register" width="300" height="100" >
+            </pre>
+        </form>
+    </center>
+    
+    
+    
+
+{% endblock body %}

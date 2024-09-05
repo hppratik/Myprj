@@ -1,0 +1,30 @@
+{% extends "base.html" %} 
+{% block title %}Edit Project{% endblock title %}
+{% block body %}
+
+    <center>
+        <h2>Edit Project</h2>
+        <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="projectid" value="{{ project.projectid }}">
+            <div class="form-group">
+                <label for="projectname">Project Name:</label>
+                <input type="text" id="projectname" name="projectname" class="form-control" value="{{ project.projectname }}">
+            </div>
+            <div class="form-group">
+                <label for="clientname">Client Name:</label>
+                <input type="text" id="clientname" name="clientname" class="form-control" value="{{ project.clientname }}">
+            </div>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" class="form-control" value="{{ project.username }}">
+            </div>
+            <div class="form-group">
+                <label for="created_by">Created By:</label>
+                <input type="text" id="created_by" name="created_by" class="form-control" value="{{ project.created_by }}">
+            </div>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+    </center>
+
+{% endblock body %}
